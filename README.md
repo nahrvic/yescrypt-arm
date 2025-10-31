@@ -1,57 +1,76 @@
-✅ Yescrypt Miner iOS Repo
+# 🌟 Yescrypt Miner iOS Repo
 
-This repository contains Yescrypt miner packages for jailbroken iOS devices. It is designed to work with Cydia, Zebra, or Sileo.
+Welcome to the **Yescrypt Miner repository** for jailbroken iOS devices!  
+Compatible with **Cydia** and **Zebra**.
 
-📦 Repo Structure
-yescrypt-repo/
+---
+
+## 🚀 Quick Add
+
+[![Add Yescrypt Miner Repo](https://img.shields.io/badge/Add-Yescrypt_Miner_Repo-blue?style=for-the-badge)](cydia://url/https://github.com/nahrvic/Yescrypt-Miner-iOS-Repo)  
+[![Add Yescrypt Miner Repo](https://img.shields.io/badge/Add-Yescrypt_Miner_Repo-purple?style=for-the-badge)](zbra://url/https://github.com/nahrvic/Yescrypt-Miner-iOS-Repo)
+
+---
+
+## 📁 Repo Structure
+
+```
+Yescrypt-Miner-iOS-Repo/
  ├── debs/
  │    └── yescryptminer_1.0_iphoneos-arm.deb
  ├── Packages
  ├── Packages.gz
- └── Release
+ ├── Release
+ └── README.md
+```
 
+- `debs/` → contains `.deb` packages  
+- `Packages` → metadata for Cydia/Zebra  
+- `Packages.gz` → compressed metadata  
+- `Release` → repo info  
+- `README.md` → this file
 
-debs/ → contains the .deb package(s)
+---
 
-Packages → metadata for Cydia/Zebra
+## ⚙️ Installation Instructions
 
-Packages.gz → compressed metadata
+1. Open **Cydia** or **Zebra** on your jailbroken iPhone  
+2. Go to **Sources → Edit → Add**  
+3. Paste your repo URL:
 
-Release → repo information
+```
+https://github.com/nahrvic/Yescrypt-Miner-iOS-Repo
+```
 
-⚙️ Installation
+4. Refresh sources  
+5. Install **Yescrypt Miner** from the list
 
-Add repo URL to Cydia/Zebra:
+---
 
-http://yourdomain.com/yescrypt-repo/
+## 🔧 Updating the Repo
 
+1. Add or replace `.deb` files inside `debs/`  
+2. Regenerate metadata:
 
-Refresh sources.
-
-Install Yescrypt Miner from the package list.
-
-🔧 Updating the Repo
-
-Add or replace .deb files inside debs/.
-
-Regenerate metadata:
-
+```bash
+cd yescrypt-repo
 dpkg-scanpackages debs /dev/null > Packages
 gzip -c Packages > Packages.gz
+```
 
+3. Commit and push **all files** to GitHub
 
-Upload all files (debs/, Packages, Packages.gz, Release) to your web host.
+---
 
-⚠️ Notes
+## ⚠️ Notes
 
-Only works on jailbroken iOS devices
+- Only works on **jailbroken iOS devices**  
+- `.deb` must match device architecture: `iphoneos-arm`, `arm64`, or `arm64e`  
+- Test on a secondary device before installing
 
-Ensure .deb matches your device architecture: iphoneos-arm, arm64, or arm64e
+---
 
-Test on a secondary device before installing
+## 📜 Credits
 
-📜 Credits
-
-Maintainer: Your Name <email@example.com>
-
-Repo created for Yescrypt CPU/GPU miner for iOS
+- Maintainer: **Your Name** `<email@example.com>`  
+- Repository created for **Yescrypt CPU/GPU miner for iOS**
